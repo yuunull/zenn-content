@@ -9,7 +9,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
 ---
 
 :::message
-本稿は、ZOZO Advent Calendar 2024 シリーズ 7 の 9 日目の記事です。
+本稿は、[ZOZO Advent Calendar 2024](https://qiita.com/advent-calendar/2024/zozo) シリーズ 7 の 9 日目の記事です。
 :::
 
 ## はじめに
