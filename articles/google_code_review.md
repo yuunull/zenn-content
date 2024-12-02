@@ -2,7 +2,7 @@
 title: "チームで学んだGoogleコードレビューガイドライン：輪読会の実践と成果"
 emoji: "😸"
 type: "tech"
-topics: ["codereview", "輪読会", "tech"]
+topics: ["codereview", "輪読会"]
 published: false
 date: "2024-12-09"
 description: "チームで学んだGoogleコードレビューガイドラインと実践成果"
