@@ -46,7 +46,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
 
 ## テーマ 1：[良い PR の説明文を書きましょう](https://google.github.io/eng-practices/review/developer/cl-descriptions.html)
 
-### PR のタイトル
+### PR のタイトル([First Line](https://google.github.io/eng-practices/review/developer/cl-descriptions.html#first-line))
 
 - 参加者から挙がった意見
   - PR のタイトルに **[TASK]** のような接頭辞を付けてラベリングしている。
@@ -55,7 +55,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
 - チームとしての理解が深まった点
   - PR タイトルに案件名などをを入れると、PR の検索性や内容の把握がしやすくなり、チーム全体での管理がより効率的になる。
 
-### 本文には有益な情報を書く
+### 本文には有益な情報を書く([Body is Informative](https://google.github.io/eng-practices/review/developer/cl-descriptions.html#informative))
 
 - 参加者から挙がった意見
   - UI 改修の場合は、修正前後のスクリーンショットを添付するとレビュワーにとってわかりやすく、親切である。
@@ -96,7 +96,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
 
 ## テーマ 2：[PR は小さくしましょう](https://google.github.io/eng-practices/review/developer/small-cls.html)
 
-### なぜ小さな PR にするのでしょうか。「小さい」とはどのようなものでしょうか。
+### なぜ小さな PR にするのでしょうか。「小さい」とはどのようなものでしょうか。([Why Write Small CLs?](https://google.github.io/eng-practices/review/developer/small-cls.html#why))
 
 - 参加者から挙がった意見
   - PR をぱっと見てボリュームがあると、レビュワーはまとまった時間を確保できたときにレビューしようと後回しにすることが多く、結果としてレビューが遅れがちになる。
@@ -106,7 +106,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
   - PR は一つの自己完結した変更を意識して作成することが重要だという認識が共有されました。小さな変更を複数回に分けて細かく PR を出すことで、レビューがスムーズに行える。
   - Issue 単位で PR を作成すると、変更内容が自然に小さくまとまり、レビュワーも理解しやすく、レビューや実装がしやすくなることが確認されました。
 
-### 大きな PR が許されるのはどのようなときでしょうか？
+### 大きな PR が許されるのはどのようなときでしょうか？([When are Large CLs Okay?](https://google.github.io/eng-practices/review/developer/small-cls.html#large-okay))
 
 - 参加者から挙がった意見
   - パッケージなどのバージョン UP で自動生成されたものが含まれる PR
@@ -118,7 +118,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
 
 ## テーマ 3：[レビュワーコメントへの対応方法](https://google.github.io/eng-practices/review/developer/handling-comments.html)
 
-### あなた個人へのコメントだと受け取らない
+### あなた個人へのコメントだと受け取らない([Don’t Take it Personally](https://google.github.io/eng-practices/review/developer/handling-comments.html#personal))
 
 - 参加者から挙がった意見
   - コメントを送る前には、一呼吸おいて内容を見直すようにしており、意図が伝わりやすくなるように心掛けている。
@@ -132,7 +132,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
   - コメントには絵文字や「！」などを追加すると、文が柔らかくなり、相手が安心して受け入れやすくなるという点が共有された。
   - レビュイーはコメントに対してそれはプロダクトや自身の成長のためと思える心を備えることが重要
 
-### コードを修正する
+### コードを修正する([Fix the Code](https://google.github.io/eng-practices/review/developer/handling-comments.html#code))
 
 - 参加者から挙がった意見
   - コードが何をしているのかを説明するコメントは、後から読んだときに非常に助かる。特に、コードが直感的でない場合や、複雑な処理が含まれている場合はコメントがあると理解しやすい。
