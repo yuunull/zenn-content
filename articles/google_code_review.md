@@ -99,7 +99,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
 
 ## テーマ 2：[PR は小さくする](https://google.github.io/eng-practices/review/developer/small-cls.html)
 
-### なぜ小さな PR にするのか。「小さい」とはどのようなものか。([Why Write Small CLs?](https://google.github.io/eng-practices/review/developer/small-cls.html#why))
+### なぜ小さな PR にするのか。([Why Write Small CLs?](https://google.github.io/eng-practices/review/developer/small-cls.html#why))
 
 - **参加者から挙がった意見**
   - 「PR を見てボリュームがあると、レビュワーはまとまった時間を確保できたときにレビューしようと後回しにしがちなため、結果としてレビューが遅れやすくなる。」
