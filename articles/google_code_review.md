@@ -49,7 +49,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
 
 ## テーマ 1：[良い PR の説明文を書く](https://google.github.io/eng-practices/review/developer/cl-descriptions.html)
 
-### PR のタイトル([First Line](https://google.github.io/eng-practices/review/developer/cl-descriptions.html#first-line))
+### より明確な PR のタイトルにする([First Line](https://google.github.io/eng-practices/review/developer/cl-descriptions.html#first-line))
 
 - **参加者から挙がった意見**
   - 「PR のタイトルに **[TASK]** のような接頭辞を付けてラベリングしている。」
