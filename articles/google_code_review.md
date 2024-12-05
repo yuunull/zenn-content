@@ -134,7 +134,7 @@ description: "チームで学んだGoogleコードレビューガイドライン
   - コメントには絵文字や「！」などを追加すると、文が柔らかくなり、相手が安心して受け入れやすくなる。
   - レビュイーはコメントに対してそれはプロダクトや自身の成長のためと思える心を備えることが重要。
 
-### コードを修正する([Fix the Code](https://google.github.io/eng-practices/review/developer/handling-comments.html#code))
+### コードを明確に修正する([Fix the Code](https://google.github.io/eng-practices/review/developer/handling-comments.html#code))
 
 - **参加者から挙がった意見**
   - 「コードが直感的でない場合や複雑な処理が含まれている場合、コメントがあると理解しやすい。」
