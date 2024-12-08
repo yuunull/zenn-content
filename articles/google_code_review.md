@@ -4,6 +4,7 @@ emoji: "😸"
 type: "tech"
 topics: ["codereview", "輪読会"]
 published: true
+published_at: 2024-12-09 07:00
 publication_name: zozotech
 date: "2024-12-09"
 description: "チームで学んだGoogleコードレビューガイドラインと実践成果"
