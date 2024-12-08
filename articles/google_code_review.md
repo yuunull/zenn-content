@@ -3,7 +3,8 @@ title: "チームで学んだGoogleコードレビューガイドライン：輪
 emoji: "😸"
 type: "tech"
 topics: ["codereview", "輪読会"]
-published: false
+published: true
+publication_name: zozotech
 date: "2024-12-09"
 description: "チームで学んだGoogleコードレビューガイドラインと実践成果"
 ---
