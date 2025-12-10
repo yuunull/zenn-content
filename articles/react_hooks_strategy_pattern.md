@@ -4,7 +4,7 @@ emoji: "☃️"
 type: "tech"
 topics:
   ["react", "typescript", "designpattern", "フロントエンド", "リファクタリング"]
-published: false
+published: true
 published_at: 2025-12-15 07:00
 publication_name: zozotech
 date: "2025-12-15"
