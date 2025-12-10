@@ -310,8 +310,7 @@ const handleError = useCallback((errorResponse: GuestOrderError) => {
 
 ### React Hooks と Strategy Pattern の融合
 
-従来のクラスベースの Strategy Pattern では、各 Strategy をクラスとしてインスタンス化しますが、今回は Custom
-Hooks を活用することで以下を実現しました。
+従来のクラスベースの Strategy Pattern では、各 Strategy をクラスとしてインスタンス化しますが、今回は Custom Hooks を活用することで以下を実現しました。
 
 - React の他の Hooks（useDevice, useRouter など）を自然に利用可能
 - useCallback によるメモ化で不要な再生成を防止
