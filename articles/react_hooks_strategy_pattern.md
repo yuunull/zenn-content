@@ -85,7 +85,7 @@ graph TD
 ### ステップ 1: 共通インターフェースの定義
 
 すべての決済手段が実装すべきインターフェースを型定義で宣言します。
-この PaymentHandler 型がすべての決済手段の Hooks が返すべき関数の型となります。
+この `PaymentHandler` 型がすべての決済手段の Hooks が返すべき関数の型となります。
 
 ```ts:types.ts
 // 決済手段の種類
@@ -115,8 +115,8 @@ export type PaymentHandler = (
 
 ### ステップ 2: 各決済手段の Hooks を作成
 
-次に、各決済手段ごとに専用の Custom Hooks を作成します。それぞれが PaymentHandler 型の関数を返すように実装します。
-各 Hooks は、決済手段固有のロジックを内包しながらも、同じ PaymentHandler 型の関数を返すことで、統一的なインターフェースを保っています。
+次に、各決済手段ごとに専用の Custom Hooks を作成します。それぞれが `PaymentHandler` 型の関数を返すように実装します。
+各 Hooks は、決済手段固有のロジックを内包しながらも、同じ `PaymentHandler` 型の関数を返すことで、統一的なインターフェースを保っています。
 
 #### 代金引換の例
 
@@ -206,9 +206,9 @@ export const usePayPaySmartPaymentHandler = (): PaymentHandler => {
 };
 ```
 
-### ステップ 3: Strategy Context の実装
+### ステップ 3: 決済ハンドラーの選択ロジックの実装
 
-各決済手段の Hooks が作成できたら、それらをまとめる Strategy Context を実装します。
+各決済手段の Hooks が作成できたら、それらをまとめて決済方法に応じて適切なハンドラーを選択する `usePaymentHandler` を実装します。
 Record 型を使用することで、TypeScript の型システムが全決済手段の実装漏れをコンパイル時に検出します。
 
 ```ts:usePaymentHandler.ts
@@ -233,7 +233,7 @@ export const usePaymentHandler = () => {
 
 選択された支払い方法ごとの Strategy (決済固有のロジック)で処理されます。
 各 Strategy は決済固有のロジックに集中し、UI 制御や状態管理は親フックに委譲します。
-onRedirectToExternal は、クレジットカードの 3DS 認証など、外部サイトへのリダイレクトが必要なケースに対応するために用意しました。
+`onRedirectToExternal` は、クレジットカードの 3DS 認証など、外部サイトへのリダイレクトが必要なケースに対応するために用意しました。
 
 ```ts:useGuestOrderFormSubmit.ts
 export const useGuestOrderFormSubmit = ({ header, onBeforeSubmit, ... }) => {
@@ -319,7 +319,7 @@ const handleError = useCallback((errorResponse: GuestOrderError) => {
 ### 責務の明確な分離
 
 - Strategy 層（各 Handler）で決済手段固有のビジネスロジックのみに集中
-- Context 層（usePaymentHandler）は Strategy の選択ロジックのみを担当
+- ハンドラー選択層（usePaymentHandler）は Strategy の選択ロジックのみを担当
 - Client 層（useGuestOrderFormSubmit）で UI 制御、フォーム状態、エラー表示など、決済に依存しない横断的関心事を管理
 
 この明確な責務分離により、各層が独立してテスト・変更可能になりました。
