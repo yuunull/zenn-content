@@ -47,7 +47,7 @@ export const useGuestOrderFormSubmit = ({ header, onBeforeSubmit, ... }) => {
         : undefined
 
         // PayPayを追加する場合
-        if (data.payment_method_type === 'paypay') {
+        if (data.paymentMethodType === 'paypay') {
           // PayPay固有の処理
         }
 
@@ -89,7 +89,7 @@ graph TD
 
 ```ts:types.ts
 // 決済手段の種類
-export type payment_method_type =
+export type PaymentMethodType =
   | "DAIBIKI"
   | "CREDIT_CARD"
   | "PAYPAY_SMART_PAYMENT";
@@ -213,14 +213,14 @@ Record 型を使用することで、TypeScript の型システムが全決済�
 
 ```ts:usePaymentHandler.ts
 export const usePaymentHandler = () => {
-  const handler: Record<Schemas.payment_method_type, PaymentHandler> = {
+  const handler: Record<Schemas.paymentMethodType, PaymentHandler> = {
     DAIBIKI: useDaibikiHandler(),
     CREDIT_CARD: useCreditCardHandler(),
     PAYPAY_SMART_PAYMENT: usePayPaySmartPaymentHandler(),
   };
 
   const placeOrder = (
-    paymentMethod: Schemas.payment_method_type,
+    paymentMethod: Schemas.paymentMethodType,
     params: GuestOrderParams,
     callbacks: GuestOrderCallbacks
   ) => handler[paymentMethod](params, callbacks);
@@ -244,7 +244,7 @@ export const useGuestOrderFormSubmit = ({ header, onBeforeSubmit, ... }) => {
         // バリデーション...
 
         await placeOrder(
-          data.payment_method_type,
+          data.paymentMethodType,
           { header, data },
           {
             onLoadingStart: () => { onBeforeSubmit() },
